@@ -29,7 +29,7 @@ const testItems = [
 ];
 
 function App() {
-  axios.put('http://localhost:8000/api/datas/1/', testItems[0])
+  axios.get('http://localhost:8000/api/datas/').then((data) => console.log(data))
   return (
     <div className="App">
      
