@@ -28,8 +28,10 @@ import axios from "axios";
   },
 ];*/
 
+const base_url = process.env.REACT_APP_API_URL;
+
 function App() {
-  axios.get('https://testbackenddjango.azurewebsites.net/api/datas/').then((data) => console.log(data))
+  axios.get(base_url + '/api/datas/').then((data) => console.log(data))
   return (
     <div className="App">
       Hello Guys
