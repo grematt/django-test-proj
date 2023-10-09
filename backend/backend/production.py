@@ -4,7 +4,7 @@ from .settings import BASE_DIR
 
 # Configure the domain name using the environment variable
 # that Azure automatically creates for us.
-ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME'], '169.254.130.4'] if 'WEBSITE_HOSTNAME' in os.environ else ['169.254.130.4']
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']] if 'WEBSITE_HOSTNAME' in os.environ else []
 DEBUG = True
 
@@ -21,6 +21,10 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'https://yellow-sky-0c9a02810.3.azurestaticapps.net/'
+]
+
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STORAGES = {
     "staticfiles": {
@@ -30,7 +34,7 @@ STORAGES = {
 
 # Configure Postgres database based on connection string of the libpq Keyword/Value form
 # https://www.postgresql.org/docs/current/libpq-connect.html#LIBPQ-CONNSTRING
-'''conn_str = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
+conn_str = os.environ['AZURE_POSTGRESQL_CONNECTIONSTRING']
 conn_str_params = {pair.split('=')[0]: pair.split('=')[1] for pair in conn_str.split(' ')}
 DATABASES = {
     'default': {
@@ -40,12 +44,4 @@ DATABASES = {
         'USER': conn_str_params['user'],
         'PASSWORD': conn_str_params['password'],
     }
-}'''
-
-CORS_ORIGIN_WHITELIST = [
-    'https://yellow-sky-0c9a02810.3.azurestaticapps.net/'
-]
-
-CORS_ALLOWED_ORIGINS = [
-    'https://yellow-sky-0c9a02810.3.azurestaticapps.net/'
-]
+}
