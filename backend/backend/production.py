@@ -21,7 +21,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-STATIC_ROOT =  "/static/"
+STATIC_ROOT =  os.path.join(BASE_DIR, 'static/')
 #STATICFILES_STORAGE = STATIC_ROOT
 
 # Configure Postgres database based on connection string of the libpq Keyword/Value form
