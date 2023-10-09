@@ -29,7 +29,7 @@ const testItems = [
 ];
 
 function App() {
-  axios.get('http://localhost:8000/api/datas/').then((data) => console.log(data))
+  axios.get('https://testbackenddjango.azurewebsites.net/api/datas/').then((data) => console.log(data))
   return (
     <div className="App">
      
