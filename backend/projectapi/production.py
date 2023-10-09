@@ -25,7 +25,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    "https://wonderful-glacier-003a1eb03.3.azurestaticapps.net",
+    "https://yellow-sky-0c9a02810.3.azurestaticapps.net/",
 ]
 
 
