@@ -1,5 +1,4 @@
 asgiref==3.7.2
-backports.zoneinfo==0.2.1
 Django==4.2.6
 django-cors-headers==4.2.0
 djangorestframework==3.14.0
@@ -9,4 +8,4 @@ sqlparse==0.4.4
 typing_extensions==4.8.0
 tzdata==2023.3
 psycopg2==2.9.6
-whitenoise==6.4.0
+whitenoise==6.5.0
