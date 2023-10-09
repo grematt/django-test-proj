@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from "axios";
 
-const testItems = [
+/*const testItems = [
   {
     id: 1,
     title: "Go to Market",
@@ -26,13 +26,13 @@ const testItems = [
     description: "Write article on how to use Django with React",
     completed: false,
   },
-];
+];*/
 
 function App() {
   axios.get('https://testbackenddjango.azurewebsites.net/api/datas/').then((data) => console.log(data))
   return (
     <div className="App">
-     
+      Hello Guys
     </div>
   );
 }

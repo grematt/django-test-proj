@@ -39,3 +39,7 @@ DATABASE_URI = 'postgresql+psycopg2://{dbuser}:{dbpass}@{dbhost}/{dbname}'.forma
     dbhost=conn_str_params['host'],
     dbname=conn_str_params['dbname']
 )
+
+CORS_ORIGIN_WHITELIST = [
+    'https://gentle-sand-0f0e9f510.3.azurestaticapps.net/'
+]
