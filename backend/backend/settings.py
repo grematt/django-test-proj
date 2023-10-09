@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://testbackenddjango.azurewebsites.net', 'testbackenddjango.azurewebsites.net']
+ALLOWED_HOSTS = ['https://testbackenddjango.azurewebsites.net', 'testbackenddjango.azurewebsites.net', 'localhost', '127.0.0.1', '20.119.0.51']
 
 
 # Application definition
