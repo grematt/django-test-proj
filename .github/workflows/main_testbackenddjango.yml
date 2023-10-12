@@ -28,10 +28,7 @@ jobs:
           source venv/bin/activate
       
       - name: Install dependencies
-        run: |
-          cd backend
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
@@ -39,7 +36,9 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: python-app
-          path: ./backend
+          path: |
+            . 
+            !venv/
 
   deploy:
     runs-on: ubuntu-latest
@@ -61,4 +60,4 @@ jobs:
         with:
           app-name: 'testBackendDjango'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B43495CD00804A0B80A2D64B3AC7B57C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7F0612F0A6AA4650997DB2DD4632E83F }}
