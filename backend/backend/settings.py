@@ -129,11 +129,11 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000', 'matthew-ascii-app.up.railway.app'
+    'http://localhost:3000', 'https://matthew-ascii-app.up.railway.app'
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'matthew-ascii-app.up.railway.app'
+    'https://matthew-ascii-app.up.railway.app'
 ]
 
 if 'DATABASE_URL' in os.environ:
