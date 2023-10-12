@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import axios from "axios";
 import MainScreen from './components/MainScreen';
 
-export const base_url = process.env.REACT_APP_API_URL;
+export const base_url = 'https://django-test-proj-production.up.railway.app';
 export const data_url = base_url + '/api/data/';
 
 function App() {
