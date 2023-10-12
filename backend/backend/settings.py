@@ -128,6 +128,10 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://django-test-proj-production.up.railway.app/'
+]
+
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000', 'https://matthew-ascii-app.up.railway.app'
 ]
