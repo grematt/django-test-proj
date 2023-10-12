@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import TestClass
+from .models import Art
 
-class TestClassAdmin(admin.ModelAdmin):
-    list_display = ('title', 'description', 'completed')
+class ArtAdmin(admin.ModelAdmin):
+    list_display = ('title', 'content')
 
-admin.site.register(TestClass, TestClassAdmin)
+admin.site.register(Art, ArtAdmin)

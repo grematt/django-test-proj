@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import TestClass
+from .models import Art
 
-class TodoSerializer(serializers.ModelSerializer):
+class ArtSerializer(serializers.ModelSerializer):
     class Meta:
-        model = TestClass
-        fields = ('id', 'title', 'description', 'completed')
+        model = Art
+        fields = ('id', 'title', 'content')

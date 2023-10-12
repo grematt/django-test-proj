@@ -1,11 +1,11 @@
 from django.db import models
+from django.core.files.storage import FileSystemStorage
 
 # Create your models here.
 
-class TestClass(models.Model):
+class Art(models.Model):
   title = models.CharField(max_length=120)
-  description = models.TextField()
-  completed = models.BooleanField(default=False)
+  content = models.TextField(max_length=10000)
 
   def _str_(self):
     return self.title

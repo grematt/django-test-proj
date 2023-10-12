@@ -1,18 +1,36 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import axios from "axios";
+import MainScreen from './components/MainScreen';
 
-const base_url = process.env.REACT_APP_API_URL;
+export const base_url = process.env.REACT_APP_API_URL;
+export const data_url = base_url + '/api/data/';
 
 function App() {
-  const [dog, setDog] = React.useState(null);
+  const [data, setData] = React.useState(null);
+  const [fetching, setFetching] = React.useState(true);
 
-  axios.get(base_url + '/api/data/').then((response) => setDog(response.data[0].content))
+  useEffect(() => {
+    axios.get(data_url).then((response) => {
+      setData(response.data);
+      setFetching(false);
+    });
+  }, [])
+
+
   return (
-    <div className="App" style={{height:'100px', width:'100px'}}>
-      <pre>
-        {dog}
-      </pre>
-    </div>
+    <React.Fragment>
+      {fetching && <div></div>}
+      {!fetching &&
+      <div>
+        <h1 style={{margin: '10px',}}>
+          Welcome To Matthew's Cool ASCII Website
+        </h1>
+        <p style={{margin: '10px', fontSize: '30px'}}>
+          Feel free to add new ASCII images to see that the API and Database work!
+        </p>
+        <MainScreen data={data}/>
+      </div> }
+    </React.Fragment>
   );
 }
 
