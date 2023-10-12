@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-mf4jzn8vg4cbql
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-test-proj-production.up.railway.app']
 
 
 # Application definition
@@ -129,7 +129,11 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000'
+    'http://localhost:3000', 'matthew-ascii-app.up.railway.app'
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'matthew-ascii-app.up.railway.app'
 ]
 
 if 'DATABASE_URL' in os.environ:
