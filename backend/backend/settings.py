@@ -133,7 +133,7 @@ CSRF_TRUSTED_ORIGINS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://matthew-ascii-app.up.railway.app'
+    
 ]
 
 CORS_ALLOW_METHODS = [
