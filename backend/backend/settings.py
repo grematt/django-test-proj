@@ -140,6 +140,8 @@ CORS_ALLOWED_ORIGINS = [
     'https://matthew-ascii-app.up.railway.app'
 ]
 
+CORS_ALLOW_ALL_ORIGINS = True
+
 if 'DATABASE_URL' in os.environ:
     DATABASES['default'] = dj_database_url.config(
         conn_max_age=500,
