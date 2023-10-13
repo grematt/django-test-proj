@@ -129,15 +129,11 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://django-test-proj-production.up.railway.app', '*'
-]
-
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:3000', 'https://matthew-ascii-app.up.railway.app', '*'
+    'https://django-test-proj-production.up.railway.app', 'https://matthew-ascii-app.up.railway.app/?', 'https://*'
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://matthew-ascii-app.up.railway.app', '*'
+    'https://matthew-ascii-app.up.railway.app', 'https://*'
 ]
 
 if 'DATABASE_URL' in os.environ:
