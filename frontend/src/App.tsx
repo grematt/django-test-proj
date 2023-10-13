@@ -14,6 +14,12 @@ function App() {
       setData(response.data);
       setFetching(false);
     });
+    const sleep = (ms: Number) => new Promise(r => setTimeout(r, 10000));
+    sleep(500);
+    axios.post(data_url, {
+      title: 'hello',
+      content: 'dawg'
+    });
   }, [])
 
 
