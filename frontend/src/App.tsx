@@ -5,12 +5,12 @@ import MainScreen from './components/MainScreen';
 export const base_url = 'https://django-test-proj-production.up.railway.app';
 export const data_url = base_url + '/api/data/';
 
-export async function postData(content:string, name:string) {
+/*export async function postData(content:string, name:string) {
   await axios.post(data_url, {
     title: name,
     content: content
   });
-}
+}*/
 
 function App() {
   const [data, setData] = React.useState(null);
