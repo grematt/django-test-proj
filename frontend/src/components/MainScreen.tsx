@@ -16,7 +16,6 @@ export default function MainScreen(data: any) {
   return (
     <div className='row' style={{justifyContent:'center'}}>
       <NewAsciiForm/>
-      {renderBoxes(data)}
     </div>
   );
 }
