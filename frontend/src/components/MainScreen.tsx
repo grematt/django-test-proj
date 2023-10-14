@@ -1,5 +1,4 @@
-import React from 'react';
-import AsciiBox from './AsciiBox';
+
 import NewAsciiForm from './NewAsciiForm';
 
 export default function MainScreen(data: any) {
