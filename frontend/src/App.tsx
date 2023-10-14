@@ -5,8 +5,8 @@ import MainScreen from './components/MainScreen';
 export const base_url = 'https://django-test-proj-production.up.railway.app';
 export const data_url = base_url + '/api/data/';
 
-export function postData(content:string, name:string) {
-  axios.post(data_url, {
+export async function postData(content:string, name:string) {
+  await axios.post(data_url, {
     title: name,
     content: content
   });
@@ -21,6 +21,7 @@ function App() {
       setData(response.data);
       setFetching(false);
     });
+    postData('1', '2');
   }, [])
 
 
