@@ -21,7 +21,6 @@ function App() {
       setData(response.data);
       setFetching(false);
     });
-    postData('1', '2');
   }, [])
 
 
