@@ -1,7 +1,4 @@
 import React from 'react';
-import { data_url } from '../App';
-import axios from 'axios';
-
 export default function NewAsciiForm() {
   let [image, setImage] = React.useState('');
   let [name, setName] = React.useState('');
