@@ -1,13 +1,16 @@
 import React from 'react';
+import { data_url } from '../App';
+import axios from 'axios';
+
 export default function NewAsciiForm() {
   let [image, setImage] = React.useState('');
   let [name, setName] = React.useState('');
 
   const handleSubmit = async() => {
-    /*await axios.post(data_url, {
+    await axios.post(data_url, {
       title: name,
       content: image
-    });*/
+    });
   };
   const handleImgChange = (event: any) => {
     setImage(event.target.value);
@@ -39,7 +42,7 @@ export default function NewAsciiForm() {
           <label>Image Name</label>
           <input className="form-control" placeholder="Enter Name" value={name} onChange={handleNameChange}/>
         </div>
-        <button onClick={handleSubmit} type="submit" className="btn btn-primary">Submit</button>
+        <button onClick={handleSubmit} className="btn btn-primary">Submit</button>
       </form>
     </div>
   );
