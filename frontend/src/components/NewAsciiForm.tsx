@@ -42,7 +42,7 @@ export default function NewAsciiForm() {
           <label>Image Name</label>
           <input className="form-control" placeholder="Enter Name" value={name} onChange={handleNameChange}/>
         </div>
-        <button onClick={handleSubmit} className="btn btn-primary">Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
       </form>
     </div>
   );
