@@ -10,6 +10,7 @@ function App() {
   const [fetching, setFetching] = React.useState(true);
 
   useEffect(() => {
+    // not 'await' as no point in doing anything else until data loaded
     axios.get(data_url).then((response) => {
       setData(response.data);
       setFetching(false);

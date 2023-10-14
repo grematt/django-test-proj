@@ -10,7 +10,8 @@ export default function NewAsciiForm() {
     await axios.post(data_url, {
       title: name,
       content: image
-    });
+      // reload after request
+    }).then(() => window.location.reload());
   };
   const handleImgChange = (event: any) => {
     setImage(event.target.value);
