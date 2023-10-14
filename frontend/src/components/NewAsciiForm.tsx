@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from "axios";
 import { postData } from '../App';
 
 export default function NewAsciiForm() {
