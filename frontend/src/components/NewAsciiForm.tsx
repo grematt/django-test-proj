@@ -1,20 +1,13 @@
 import React from 'react';
 import axios from "axios";
-import { data_url } from '../App';
+import { postData } from '../App';
 
 export default function NewAsciiForm() {
   let [image, setImage] = React.useState('');
   let [name, setName] = React.useState('');
 
   const handleSubmit = async() => {
-    try {
-      await axios.post(data_url, {
-        title: name,
-        content: image
-      });
-    } catch (error) {
-      console.error('Error submitting new ASCII art:', error);
-    }
+    postData(image, name);
   };
   const handleImgChange = (event: any) => {
     setImage(event.target.value);

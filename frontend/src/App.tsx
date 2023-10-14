@@ -5,6 +5,13 @@ import MainScreen from './components/MainScreen';
 export const base_url = 'https://django-test-proj-production.up.railway.app';
 export const data_url = base_url + '/api/data/';
 
+export async function postData(content:string, name:string) {
+  await axios.post(data_url, {
+    title: name,
+    content: content
+  });
+}
+
 function App() {
   const [data, setData] = React.useState(null);
   const [fetching, setFetching] = React.useState(true);
@@ -13,12 +20,6 @@ function App() {
     axios.get(data_url).then((response) => {
       setData(response.data);
       setFetching(false);
-    });
-    const sleep = (ms: Number) => new Promise(r => setTimeout(r, 10000));
-    sleep(500);
-    axios.post(data_url, {
-      title: 'hello',
-      content: 'dawg'
     });
   }, [])
 
