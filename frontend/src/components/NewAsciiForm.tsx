@@ -7,11 +7,13 @@ export default function NewAsciiForm() {
   let [name, setName] = React.useState('');
 
   const handleSubmit = async() => {
-    await axios.post(data_url, {
-      title: name,
-      content: image
-      // reload after request
-    }).then(() => window.location.reload());
+    try {
+      await axios.post(data_url, {
+        title: name,
+        content: image
+        // reload after request
+      }).then(() => window.location.reload());
+    } catch {/*Dont want to show error on screen*/}
   };
   const handleImgChange = (event: any) => {
     setImage(event.target.value);

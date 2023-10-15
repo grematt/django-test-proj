@@ -7,9 +7,8 @@ export default function MainScreen(data: any) {
     data = data.data
     console.log(data)
     let boxes = []
-    for (let i = 0; i < data.length; i++) {
-      boxes.push(<AsciiBox content={data[i].content} name={data[i].title} key={i}/>);
-    }
+    for (let i = 0; i < data.length; i++)
+      boxes.push(<AsciiBox content={data[i].content} name={data[i].title} id={data[i].id} key={i}/>);
     return boxes;
   }
 
